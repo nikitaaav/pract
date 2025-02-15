@@ -18,4 +18,5 @@
 5) `git commit -m "Initial commit"` - коммит с сообщением
 6) `git add` - добавил два новых файла в `staged`
 7) Создал .gitignore, добавил туда `.idea/`, `.DS_Store`, `venv`
-8) 
+8) Создал ветку с помощью `git branch vetka`, перешел с помощью `git checkout`. Доступны только `vetka` и `master`
+9) 
