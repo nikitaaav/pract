@@ -19,4 +19,4 @@
 6) `git add` - добавил два новых файла в `staged`
 7) Создал .gitignore, добавил туда `.idea/`, `.DS_Store`, `venv`
 8) Создал ветку с помощью `git branch vetka`, перешел с помощью `git checkout`. Доступны только `vetka` и `master`
-9) 
+9) Добавил несколько файлов в `vetka`, слил с помощью `git merge vetka`
