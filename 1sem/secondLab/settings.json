@@ -1,0 +1,25 @@
+{
+  "screen": {
+    "width": 1280,
+    "height": 720
+  },
+  "lilypad": {
+    "count": 10,
+    "radius": 25,
+    "weight_ratio": [30, 70]
+  },
+  "frog": {
+    "jump_distance": 100,
+    "fall_prob": 0.025
+  },
+  "colors": {
+    "lily_color": [92, 139, 21],
+    "frog_color": [227, 38, 54],
+    "water_color": [35, 137, 218],
+    "line_color": [0, 0, 0],
+    "fps_color": [255, 255, 255],
+    "hit_color": [255, 0, 0]
+  },
+  "fps": 60,
+  "move_speed": 5
+}
