@@ -14,4 +14,8 @@
 1) `git init` - инициализировал проект
 2) `git status` - показывает состояние файлов. У меня неотслеживаемые - `.DS_Store`, `.idea`, `1sem/`, `2sem/`
 3) После создания файла main.py он добавился в неотслеживаемые
-4) `git add \ git status`
+4) `git add \ git status` - все файлы перешли из `untracked` в `tracked`
+5) `git commit -m "Initial commit"` - коммит с сообщением
+6) `git add` - добавил два новых файла в `staged`
+7) Создал .gitignore, добавил туда `.idea/`, `.DS_Store`, `venv`
+8) 
