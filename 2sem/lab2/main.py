@@ -4,7 +4,7 @@ pygame.init()
 
 screen=pygame.display.set_mode((800,600),pygame.RESIZABLE)
 screen.fill((255,255,255))
-pygame.display.set_caption('Первая программа в pygame')
+pygame.display.set_caption('Поздоровкин Кирилл Алексеевич')
 
 pygame.draw.circle(screen,'red',[200,100],30,width=0)
 pygame.draw.circle(screen,[255,154,13],[100,400],50,width=15)
