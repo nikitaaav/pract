@@ -25,6 +25,7 @@ class Camera():
 
 class Game():
     def __init__(self):
+        self.is_help = None
         self.run = True
         # список всех персонажей игры:
         self.all_sprites = pygame.sprite.Group()
@@ -157,6 +158,29 @@ class Game():
         w = win_width / 8
         h = win_height / 8
         self.window.blit(self.help.img, (w, h))
+
+        hints = [
+            "Нажмите ESC, чтобы выйти из меню",
+            "Используйте стрелки для движения",
+            "Чтобы прыгнуть, используйте пробел",
+            "Нажмите H для просмотра помощи",
+            "",
+            "Враги:",
+            "Големы - медленные и стреляют",
+            "Варвары - быстрые и опасные"
+        ]
+
+        # Указываем шрифт и начальную позицию
+        font = pygame.font.Font(None, 22)
+        text_y = h + 50  # Начальная координата Y
+
+        # Отображаем каждую строку текста с небольшим отступом
+        for hint in hints:
+            hint_surface = font.render(hint, True, (255, 255, 255))
+            self.window.blit(hint_surface, (w + 40, text_y))
+            text_y += 40  # Увеличиваем Y для следующей строки
+
+
         self.is_help = True
     
     def resume(self):
