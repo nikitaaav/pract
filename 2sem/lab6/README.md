@@ -1,19 +1,27 @@
-# Отчет о проделанной работе
-
-В ходе данной работы был создан файловый менеджер, умеющий манипулировать файлами и папками.
-
-### Файлы:
-- `commands.py` - модуль с обработкой команд
-- `directory.py` - модуль с функциями взаимодействия с директориями
-- `engine.py` - обертка над логикой
-- `file.py` - модуль с функциями взаимодействия с файлами
-- `main.py` - место запуска программы
-- `navigate.py` - модуль с функциями перемещения между директориями
-- `root.py` - модуль, который фиксирует корневую директорию
-
-### Логика работы
-- Запускается бесконечный цикл
-- Вводится команда - она соотносится с какой-то функцией
-- Вызывается определенная функция с необходимыми переменными
-- Файловая система переходит в новое состояние
-- Печатается результат (если есть)
+╔════════════════════════════════════════════════════════════════════════════╗
+║                         File System Manager Project                         ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║                                                                             ║
+║  Project Overview:                                                          ║
+║  A command-line file system manager implementation with file and directory  ║
+║  manipulation capabilities.                                                 ║
+║                                                                             ║
+║  Project Structure:                                                         ║
+║  ┌─────────────────────────────────────────────────────────────────────┐   ║
+║  │ • commands.py  - Command processing module                           │   ║
+║  │ • directory.py - Directory operations module                          │   ║
+║  │ • engine.py    - Core logic wrapper                                   │   ║
+║  │ • file.py      - File operations module                               │   ║
+║  │ • main.py      - Application entry point                              │   ║
+║  │ • navigate.py  - Directory navigation module                          │   ║
+║  │ • root.py      - Root directory management module                     │   ║
+║  └─────────────────────────────────────────────────────────────────────┘   ║
+║                                                                             ║
+║  Application Flow:                                                          ║
+║  1. Continuous operation loop                                              ║
+║  2. Command input processing                                               ║
+║  3. Function execution with parameters                                     ║
+║  4. File system state update                                               ║
+║  5. Result output (if applicable)                                          ║
+║                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════╝
