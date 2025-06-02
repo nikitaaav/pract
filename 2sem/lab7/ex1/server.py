@@ -4,7 +4,9 @@ import datetime
 def log(message):
     """Простая функция логирования с меткой времени."""
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    print(f"[{timestamp}] {message}")
+    print(f"┌─[{timestamp}]─{'─' * (len(message) + 2)}┐")
+    print(f"│ {message} │")
+    print(f"└─{'─' * (len(message) + len(timestamp) + 5)}┘")
 
 def handle_client(client_socket, client_address):
     """Обрабатывает подключение от одного клиента (однопоточно)."""

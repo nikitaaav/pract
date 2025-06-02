@@ -6,7 +6,9 @@ selector = selectors.DefaultSelector()
 
 def accept(sock):
     conn, addr = sock.accept()
-    print(f"[Selector Server] Подключение от {addr}")
+    print(f"╭─ Selector Server ─{'─' * 40}╮")
+    print(f"│ New connection from {addr}")
+    print(f"╰─{'─' * 60}╯")
     conn.setblocking(False)
     selector.register(conn, selectors.EVENT_READ, echo)
 
@@ -16,11 +18,15 @@ def echo(conn):
         data = conn.recv(1024)
         if data:
             if data.decode().strip().lower() == 'shutdown':
-                print("[Selector Server] Завершение по команде shutdown")
+                print("╭─ Selector Server ─{'─' * 40}╮")
+                print("│ Shutdown command received")
+                print(f"╰─{'─' * 60}╯")
                 selector.unregister(conn)
                 conn.close()
                 raise KeyboardInterrupt
-            print("[Selector Server] Эхо:", data.decode())
+            print("╭─ Selector Server ─{'─' * 40}╮")
+            print(f"│ Echo: {data.decode()}")
+            print(f"╰─{'─' * 60}╯")
             conn.sendall(data)
         else:
             selector.unregister(conn)
@@ -36,7 +42,9 @@ def run_selector_server():
     server.listen()
     server.setblocking(False)
     selector.register(server, selectors.EVENT_READ, accept)
-    print("[Selector Server] Запущен...")
+    print("╭─ Selector Server ─{'─' * 40}╮")
+    print("│ Server started and listening...")
+    print(f"╰─{'─' * 60}╯")
     try:
         while True:
             events = selector.select()
@@ -44,4 +52,6 @@ def run_selector_server():
                 callback = key.data
                 callback(key.fileobj)
     except KeyboardInterrupt:
-        print("[Selector Server] Сервер завершён")
+        print("╭─ Selector Server ─{'─' * 40}╮")
+        print("│ Server terminated")
+        print(f"╰─{'─' * 60}╯")
